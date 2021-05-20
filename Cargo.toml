@@ -3,5 +3,6 @@
 
 [workspace]
 members = [
-  "hello-world"
+  "hello-world",
+  "reverse-string"
 ]
