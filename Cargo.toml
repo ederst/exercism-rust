@@ -4,5 +4,6 @@
 [workspace]
 members = [
   "hello-world",
-  "reverse-string"
+  "reverse-string",
+  "gigasecond"
 ]
