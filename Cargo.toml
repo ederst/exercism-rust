@@ -1,0 +1,7 @@
+# This is a "virtual manifest", to conveniently run the tests from one place:
+#  * https://doc.rust-lang.org/cargo/reference/workspaces.html
+
+[workspace]
+members = [
+  "hello-world"
+]
