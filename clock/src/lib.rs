@@ -8,17 +8,17 @@ pub struct Clock {
 
 impl Clock {
     pub fn new(hours: i32, minutes: i32) -> Self {
-        let time: NaiveTime = NaiveTime::from_hms(0, 0, 0)
-            + Duration::hours(hours as i64)
-            + Duration::minutes(minutes as i64);
-
-        Clock { time }
+        Clock {
+            time: NaiveTime::from_hms(0, 0, 0)
+                + Duration::hours(hours as i64)
+                + Duration::minutes(minutes as i64),
+        }
     }
 
     pub fn add_minutes(&self, minutes: i32) -> Self {
-        let time: NaiveTime = self.time + Duration::minutes(minutes as i64);
-
-        Clock { time }
+        Clock {
+            time: self.time + Duration::minutes(minutes as i64),
+        }
     }
 }
 
