@@ -1,8 +1,7 @@
 use chrono::{Duration, NaiveTime};
-use std::{cmp, fmt};
+use std::fmt;
 
-const CLOCK_FORMAT: &str = "%H:%M";
-
+#[derive(Debug, Eq, PartialEq)]
 pub struct Clock {
     time: NaiveTime,
 }
@@ -23,20 +22,8 @@ impl Clock {
     }
 }
 
-impl cmp::PartialEq for Clock {
-    fn eq(&self, other: &Self) -> bool {
-        self.time == other.time
-    }
-}
-
-impl fmt::Debug for Clock {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{}", self.time.format(CLOCK_FORMAT))
-    }
-}
-
 impl fmt::Display for Clock {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{}", self.time.format(CLOCK_FORMAT))
+        write!(f, "{}", self.time.format("%H:%M"))
     }
 }
