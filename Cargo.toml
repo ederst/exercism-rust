@@ -7,5 +7,6 @@ members = [
   "reverse-string",
   "gigasecond",
   "clock",
-  "leap"
+  "leap",
+  "raindrops"
 ]
