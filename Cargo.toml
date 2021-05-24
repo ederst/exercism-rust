@@ -9,5 +9,6 @@ members = [
   "clock",
   "leap",
   "raindrops",
-  "anagram"
+  "anagram",
+  "difference-of-squares"
 ]
