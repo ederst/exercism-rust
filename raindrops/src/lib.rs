@@ -67,17 +67,14 @@ Based on my Python solution:
 and:
   * https://exercism.io/tracks/rust/exercises/raindrops/solutions/f4a2a248431041fd97647c19d9a9476c
   * https://exercism.io/tracks/rust/exercises/raindrops/solutions/ad56bd6ff61c47f9944ce883b7110528
+  * https://exercism.io/tracks/rust/exercises/raindrops/solutions/156b36dbabd14ab1bbb2b3ae5b96d60f
 */
 pub fn raindrops_with_map_and_filter(n: u32) -> String {
     let sound_mapping = [(3, "Pling"), (5, "Plang"), (7, "Plong")];
 
-    // TODO: IDK why to use Some() here, find out why this is
     match sound_mapping
         .iter()
-        .filter_map(|&(factor, sound)| match n % factor {
-            0 => Some(sound),
-            _ => Some(""),
-        })
+        .map(|&(factor, sound)| if n % factor == 0 { sound } else { "" })
         .collect::<String>()
     {
         ref res if !res.is_empty() => res.to_owned(),
