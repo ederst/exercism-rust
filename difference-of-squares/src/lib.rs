@@ -1,17 +1,16 @@
-fn square(n: u32) -> u32 {
-    u32::pow(n, 2)
-}
-
 pub fn square_of_sum(n: u32) -> u32 {
-    square((1..n + 1).sum())
+    (1..=n).sum::<u32>().pow(2)
 }
 
 pub fn sum_of_squares(n: u32) -> u32 {
     // i can do this, but this needs `.unwrap()`, meh
-    // (1..n + 1).reduce(|a, b| a + u32::pow(b, 2)).unwrap()
+    // (1..=n).reduce(|a, b| a + square(b)).unwrap()
 
     // fold don't need this, but needs init value
-    (1..n + 1).fold(0, |a, b| a + square(b))
+    (1..=n).fold(0, |a, b| a + b.pow(2))
+
+    // map is of course also possible:
+    // (1..=n).map(|x| x.pow(2)).sum()
 }
 
 pub fn difference(n: u32) -> u32 {
