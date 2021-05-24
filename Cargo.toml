@@ -8,5 +8,6 @@ members = [
   "gigasecond",
   "clock",
   "leap",
-  "raindrops"
+  "raindrops",
+  "anagram"
 ]
