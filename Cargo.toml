@@ -10,5 +10,6 @@ members = [
   "leap",
   "raindrops",
   "anagram",
-  "difference-of-squares"
+  "difference-of-squares",
+  "high-scores"
 ]
