@@ -11,5 +11,6 @@ members = [
   "raindrops",
   "anagram",
   "difference-of-squares",
-  "high-scores"
+  "high-scores",
+  "armstrong-numbers"
 ]
